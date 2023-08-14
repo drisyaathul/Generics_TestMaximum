@@ -22,6 +22,16 @@ public class TestMaximum {
         System.out.println(maximum+ " is the Maximum of Three Floats");
     }
 
+    public static void maximumOfThreeStrings(String a, String b, String c) {
+
+        String maximum = a;
+        if (b.compareTo(maximum) > 0)
+            maximum = b;
+        if (c.compareTo(maximum) > 0)
+            maximum = c;
+        System.out.println(maximum+ " is the Maximum of Three Strings");
+    }
+
     public static void main(String[] args) {
         //Maximum of Three Integers :
         //TC1.1:
@@ -38,6 +48,14 @@ public class TestMaximum {
         maximumOfThreeFloats(25.23f,32.23f,15.79f);
         //TC2.3
         maximumOfThreeFloats(25.23f,18.23f,38.21f);
+        System.out.println("-------------------------------------");
+        //Maximum of Three Strings :
+        //TC3.1:
+        maximumOfThreeStrings("Orange","Apple","Grape");
+        //TC3.2
+        maximumOfThreeStrings("Peach","Pineapple","Grape");
+        //TC3.3
+        maximumOfThreeStrings("Guava","Apple","Peach");
     }
 
 
