@@ -1,6 +1,14 @@
 package com.generics;
 
-public class TestMaximum {
+public class TestMaximum <T extends  Comparable<T>> {
+
+    T x,y,z;
+
+    public TestMaximum(T x, T y, T z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
 
     public static <T extends Comparable <T>> T maximumOfThreeVariables (T x, T y, T z) {
 
@@ -10,7 +18,6 @@ public class TestMaximum {
         if (z.compareTo(maximum) > 0)
             maximum = z;
         return maximum;
-
     }
 
     public static void main(String[] args) {
